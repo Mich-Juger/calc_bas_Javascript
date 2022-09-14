@@ -5,26 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
+<!--CSS-->    
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
+<!--CSS-->
+<!--Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
-
+<!--Google Fonts -->
 </head>
+
 <body>
     <main>
-<!--producto-->
-    <!--contenedor formulario_calculo--> <!--contenedor formulario_calculo-->
-        <section>
+<!--Section principal producto-->
+        <section> 
+            <!--contenedor formulario_calculo--> <!--contenedor formulario_calculo-->
             <article>
                 <div>
-                    <img id="img_zapatilla" src="assets/img/zapatillaAzul.png" alt="zapatilla">
+                    <img src="assets/img/zapatillaAzul.png" alt="zapatilla">
                 </div>                
                 <div id="formulario">
                     <p>Zapatilla Converse</p>
-                    <div id="p2">
+                    <div id="input-color-cantidad">
                         <p>
                             <input placeholder="Ingresa cantidad" type="number" id="cantidad" name="cantidad">
                         </p>
@@ -36,22 +39,21 @@
                         <span>Precio: $29.800</span>
                     </p>
                     <p>
-                        <input type="button" id="calculo" name="calculo" value="CALCULAR TOTAL">
+                        <input type="button" placeholder="Color" id="calculo" name="calculo" value="CALCULAR TOTAL">
                     </p>
                 </div>
             </article>
-<!--contenedor formulario_calculo-->
+            <!--contenedor formulario_calculo-->
 
-<!--contenedor totales_resultado-->
-            <section>
-                <article>
-                    <p>Total: <span id="total"></span></p>
-                    <p>Cantidad Final: <span id="cantidad_final"></span></p>
-                    <p>Color<div id="color_final"></div></p>
-                </article>
-            </section> 
+            <!--contenedor totales_resultado-->
+            <article>
+                <p>Total: <span id="total"></span></p>
+                <p>Cantidad Final: <span id="cantidad_final"></span></p>
+                <div class="color-resultado"><p>Color</p><div id="color_final"></div></div>
+            </article>
+            <!--contenedor totales_resultado-->
         </section>
-<!--contenedor totales_resultado-->
+<!--Section principal producto-->
     </main>    
     <script src="assets/js/script.js"></script>
 </body>

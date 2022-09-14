@@ -3,30 +3,22 @@ main {
     min-height: 100vh;
     background-image: url(../img/R\ \(5\).png);
     display: flex;
+    display: wrap;
     align-items: center;
     background-size: cover;
     font-family: 'Oswald', sans-serif;
-    font-size: 24px;
+    font-size: 26px;
 }
 
 main > section {
     width: 40%;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
 }
 
-@media (max-width: 576px) {
-    main > section {
-      flex: 100%;
-    }
-  }
-
-main > section:nth-child(1) {
+main > section {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: 2px solid;
 }
 
 p {
@@ -35,17 +27,27 @@ p {
     color: white;
 }
 
+/*Section principal*/
+
+
+/*Media*/
+@media (max-width: 800px) {
+   section {
+      flex: 100%;
+    }
+}
+/*Media*/
 
 /**contenedor formulario_calculo**/
 
-#p2 {
+#input-color-cantidad {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 80%;
 }
 
-main > section > article {
+main > section > article:nth-child(1) {
     width: 60%;
     background-color: rgba(0, 0, 0, 0.858);
     display: flex;
@@ -66,16 +68,14 @@ img {
 }
 
 #formulario {
-    height: 200px;
+    height: 220px;
 }
 
-#formulario :nth-child(1) {
-    margin-bottom: 10px;
+#formulario span {
+    font-size: 18px;
 }
 
-#formulario :last-child {
-    margin-bottom: 00px;
-}
+/*Boton*/
 
 #calculo {
     font-size: 22px;
@@ -87,32 +87,42 @@ img {
     font-family: 'Oswald', sans-serif;
 }
 
-#color {
-    height: 26px;
+#calculo {
+    transition-duration: 0.4s;    
+}
+  
+#calculo:hover {
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid black;
 }
 
-/**boton calcular**/
-div > p > span {    
-    font-size: 18px;
+#calculo > div:active {
+    background-color: #fefeff;
 }
-/**boton calcular**/   
+/*Boton*/
 
-/**contenedor formulario_calculo**/
-
-
+/**contenedor formulario_calculo**//**contenedor formulario_calculo**/
 
 /**contenedor totales_resultado**/
 
+.color-resultado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 25px;
+}
+
 #color_final {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     border-radius: 100%;
     border: 2px solid white;
     background-color: brown;
 }
 
-
-main > section > section {
+main > section > article:nth-child(2) {
     width: 40%;
     background-color: rgba(0, 0, 0, 0.94);
     display: flex;
@@ -120,8 +130,8 @@ main > section > section {
     flex-direction: column;
 }
 
-main > section > section > article {
-    margin-left: 30px;
+main > section > article > p {
+    padding-left: 30px;
 }
 /**contenedor totales_resultado**/
 

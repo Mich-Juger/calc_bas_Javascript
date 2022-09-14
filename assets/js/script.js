@@ -10,7 +10,8 @@ let color_final = document.querySelector('#color_final');
 button_calcular.addEventListener('click', function() {
     let valor_final = cantidad.value * precio;
     total.innerHTML = valor_final.toString().replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ".");
+    total.innerHTML = valor_final.toLocaleString('es-CL', { style: 'currency', currency: 'CLP' });
     cantidad_final.innerHTML = cantidad.value;
-    color_final.style.background = color.value;   
+    color_final.style.background = color.value; 
 });
 
